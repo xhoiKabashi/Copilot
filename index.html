@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web Developer Landing Page</title>
+  <title>Xhoi Kabashi – Web Developer</title>
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="mui-appbar">
+  <header class="mui-appbar glass">
     <div class="mui-toolbar">
       <span class="mui-title">Xhoi Kabashi</span>
       <nav>
@@ -21,37 +22,39 @@
     <section class="mui-hero">
       <div class="mui-hero-content">
         <h1>Web Developer</h1>
-        <p>Building modern, responsive, and user-friendly web experiences.</p>
-        <a href="#contact" class="mui-btn mui-btn-primary">Hire Me</a>
+        <p>Building modern, responsive, and user-friendly web experiences.<br>
+           <span class="mui-highlight">Let's create something amazing together.</span>
+        </p>
+        <a href="#contact" class="mui-btn mui-btn-primary mui-btn-glow">Hire Me</a>
       </div>
     </section>
-    <section id="about" class="mui-section mui-card">
+    <section id="about" class="mui-section mui-card glass">
       <h2>About Me</h2>
       <p>
-        Hi, I'm Xhoi! I specialize in front-end development using HTML, CSS, and JavaScript.
-        My passion is to create beautiful and functional websites with a focus on Material Design and usability.
+        Hi, I'm <b>Xhoi</b>! I specialize in front-end development using <span class="mui-highlight">HTML, CSS, and JavaScript</span>.
+        I love crafting beautiful, functional websites focused on usability and accessibility.
       </p>
     </section>
     <section id="projects" class="mui-section">
       <h2>Projects</h2>
       <div class="mui-card-list">
-        <div class="mui-card mui-shadow">
+        <div class="mui-card mui-shadow glass">
           <h3>Portfolio Website</h3>
           <p>Personal website to showcase my work and skills using Material UI principles.</p>
         </div>
-        <div class="mui-card mui-shadow">
+        <div class="mui-card mui-shadow glass">
           <h3>Task Tracker App</h3>
           <p>A simple and elegant task manager built with pure JavaScript.</p>
         </div>
-        <div class="mui-card mui-shadow">
+        <div class="mui-card mui-shadow glass">
           <h3>Responsive Blog</h3>
           <p>Blog platform with a clean Material-inspired layout and smooth animations.</p>
         </div>
       </div>
     </section>
-    <section id="contact" class="mui-section mui-card">
+    <section id="contact" class="mui-section mui-card glass">
       <h2>Contact</h2>
-      <form id="contactForm">
+      <form id="contactForm" autocomplete="off">
         <div class="mui-form-group">
           <input type="text" id="name" placeholder="Your Name" required />
         </div>
@@ -59,14 +62,14 @@
           <input type="email" id="email" placeholder="Your Email" required />
         </div>
         <div class="mui-form-group">
-          <textarea id="message" placeholder="Your Message" required></textarea>
+          <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
         </div>
-        <button type="submit" class="mui-btn mui-btn-primary">Send</button>
+        <button type="submit" class="mui-btn mui-btn-primary mui-btn-glow">Send</button>
       </form>
       <p id="formMsg"></p>
     </section>
   </main>
-  <footer class="mui-footer">
+  <footer class="mui-footer glass">
     <p>© 2025 Xhoi Kabashi. All rights reserved.</p>
   </footer>
   <script src="script.js"></script>
