@@ -1,174 +1,57 @@
-/* Material UI Colors */
-:root {
-  --mui-primary: #1976d2;
-  --mui-primary-dark: #115293;
-  --mui-secondary: #ff4081;
-  --mui-bg: #fafafa;
-  --mui-surface: #fff;
-  --mui-text: #222;
-  --mui-shadow: 0 2px 8px rgba(30, 30, 30, 0.08);
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
+/* Import Roboto font (already in HTML) */
+body {
   font-family: 'Roboto', Arial, sans-serif;
-  background: var(--mui-bg);
-  color: var(--mui-text);
+  letter-spacing: 0.03em;
 }
 
-.mui-appbar {
-  background: var(--mui-primary);
-  color: #fff;
-  box-shadow: var(--mui-shadow);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+/* Glassmorphism effect for cards, appbar, footer */
+.glass {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.mui-toolbar {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem 1.5rem;
+
+/* Glowing button effect */
+.mui-btn-glow {
+  box-shadow: 0 0 8px 2px var(--mui-secondary), 0 4px 20px rgba(33, 150, 243, 0.06);
+  transition: box-shadow 0.4s;
 }
-.mui-title {
-  font-weight: 500;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
+.mui-btn-glow:hover {
+  box-shadow: 0 0 24px 6px var(--mui-secondary);
 }
-.mui-toolbar nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 2rem;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-.mui-toolbar nav a:hover {
+
+/* Highlight important words */
+.mui-highlight {
   color: var(--mui-secondary);
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffe7f3 30%, #e3f0fc 100%);
+  border-radius: 6px;
+  padding: 2px 6px;
 }
 
-/* Hero Section */
-.mui-hero {
-  background: linear-gradient(90deg, var(--mui-primary) 60%, var(--mui-primary-dark) 100%);
-  color: #fff;
-  padding: 80px 0 70px 0;
-  text-align: center;
-  box-shadow: var(--mui-shadow);
-}
-.mui-hero-content h1 {
-  font-size: 2.7rem;
-  margin-bottom: 10px;
-}
-.mui-hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 28px;
-}
-
-/* Material Button */
-.mui-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  font-size: 1rem;
-  border-radius: 24px;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  outline: none;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-}
-
-.mui-btn-primary {
-  background: var(--mui-secondary);
-  color: #fff;
-  box-shadow: 0 2px 6px rgba(255,64,129,0.1);
-}
-.mui-btn-primary:hover {
-  background: #e91e63;
-}
-
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Card and Section Styles */
-.mui-section {
-  margin: 54px 0 0 0;
-}
-.mui-card {
-  background: var(--mui-surface);
-  border-radius: 14px;
-  box-shadow: var(--mui-shadow);
-  padding: 36px 32px 24px 32px;
-  margin-bottom: 40px;
-}
-.mui-card h2, .mui-card h3 {
-  margin-top: 0;
-}
-.mui-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 20px;
-}
-.mui-shadow {
-  box-shadow: 0 4px 20px rgba(33, 150, 243, 0.08);
-}
-.mui-card-list .mui-card {
-  flex: 1 1 270px;
-  min-width: 220px;
-  max-width: 32%;
-  box-sizing: border-box;
-  margin-bottom: 0;
-}
-@media (max-width: 768px) {
-  .mui-card-list {
-    flex-direction: column;
+/* Responsive improvements */
+@media (max-width: 600px) {
+  .mui-hero-content h1 {
+    font-size: 2rem;
   }
-  .mui-card-list .mui-card {
-    max-width: 100%;
+  .mui-card {
+    padding: 20px 10px;
+  }
+  .mui-section {
+    margin: 28px 0 0 0;
   }
 }
 
-/* Form Styles */
-.mui-form-group {
-  margin-bottom: 1.1rem;
-}
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cfd8dc;
-  border-radius: 7px;
-  font-size: 1rem;
-  font-family: inherit;
-  background: #f7f7f7;
-  box-sizing: border-box;
-  margin-top: 6px;
-  resize: none;
-  outline: none;
-  transition: border-color 0.2s;
-}
-input:focus, textarea:focus {
-  border-color: var(--mui-primary);
+/* Slightly larger nav links for modern feel */
+.mui-toolbar nav a {
+  font-size: 1.08rem;
+  letter-spacing: 0.03em;
 }
 
-#formMsg {
-  margin-top: 10px;
-  color: var(--mui-primary);
-  font-weight: 500;
-}
-
-/* Footer */
-.mui-footer {
-  background: #ececec;
-  text-align: center;
-  padding: 22px 0 12px 0;
-  color: #555;
-  font-size: 1rem;
-  margin-top: 70px;
+/* Card hover effect */
+.mui-card-list .mui-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 32px 0 rgba(33, 150, 243, 0.13);
 }
